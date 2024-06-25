@@ -4,11 +4,25 @@
 #define COLUMN 4
 #define ROW 4
 #include "pch.h"
-#include "Block.h"
 enum PartialUndoCode {
 	kCenter = 1,
 	kLength = 2,
 };
+
+enum ColorIndex {
+	color0 = 251,  //251
+	color2 = 20,
+	color4 = 30,
+	color8 = 40,
+	color16 = 151,
+	color32 = 66,
+	color64 = 72,
+	color128 = 102,
+	color256 = 85,
+	color512 = 90,
+	color1024 = 1,
+};
+
 
 struct Rectangle
 {
@@ -25,6 +39,8 @@ struct Rectangle
 	int m_length; // 获取消息长度
 	ZSoft::Boolean raw = ZSoft::kFalse;  // 非原始文本
 	AcGiTextStyle textStyle;  // 创建文本样式对象，根据需要设置样式属性
+
+	
 };
 
 class GameDrawer : public AcDbEntity
@@ -86,6 +102,8 @@ private:
 public:
 	void updataArray(std::array<std::array<int, ROW>, COLUMN> dataArray);
 	void initText();
+	/*void moveBlock(AcGePoint3d stPoint, int size);
+	void updateBlock();*/
 };
 
 #endif

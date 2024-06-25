@@ -39,6 +39,8 @@
 #include "Block.h"
 #include <vector>
 #include "Implementation.h"
+#include "dbhatch.h"
+
 
 #define cmd_group_name _T("Zrx2048")
 
