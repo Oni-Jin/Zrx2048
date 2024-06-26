@@ -16,10 +16,10 @@ ACRX_DXF_DEFINE_MEMBERS (
 //---- construct & destruct
 
 GameDrawer::GameDrawer() {
-	setLength(1000.0);
+	setLength(10000.0);
 	startPoint = { 0,0,0 };
 	gridSize = 4;
-	m_center.set(500, 500, 0);
+	m_center.set(5000, 5000, 0);
 	m_len = length / gridSize;
 	updataLocation();
 	for (int i = 0; i < 16; i++) {
